@@ -1,0 +1,30 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; }
+        h1 { color: #2c3e50; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: #2980b9; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>API Dashboard</h1>
+    <p>Click on the endpoints below to interact with the APIs:</p>
+    <ul>
+        <li><a href="/admin/" target="_blank">Admin Panel</a></li>
+        <li><a href="/auth/login/" target="_blank">Login (POST)</a></li>
+        <li><a href="/auth/registration/" target="_blank">Registration (POST)</a></li>
+        <li><a href="/auth/user/" target="_blank">Current User Info (GET)</a></li>
+        <li><a href="/auth/logout/" target="_blank">Logout (POST)</a></li>
+        <li><a href="/auth/password/reset/" target="_blank">Password Reset (POST)</a></li>
+        <li><a href="/swagger/" target="_blank">Swagger UI</a></li>
+        <li><a href="/redoc/" target="_blank">ReDoc</a></li>
+    </ul>
+</body>
+</html>
