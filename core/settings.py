@@ -179,6 +179,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_UNIQUE_EMAIL = True
 
 AUTHENTICATION_BACKENDS = [
+     'userauth.auth_backend.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
@@ -223,6 +224,10 @@ SWAGGER_SETTINGS = {
         }
     }
 }
+AUTH_USER_MODEL = 'userauth.CustomUser'
+
+# ACCOUNT_ADAPTER = 'userauth.adapters.MyAccountAdapter'
+
 
 # REST_AUTH_REGISTER_SERIALIZERS = {
 #     'REGISTER_SERIALIZER': 'userauth.serializers.CustomRegisterSerializer',
