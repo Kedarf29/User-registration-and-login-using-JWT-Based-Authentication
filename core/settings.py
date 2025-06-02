@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "unfold",
+     'rangefilter',
     'unfold.contrib.import_export' ,
     'unfold.contrib.filters',
     'django.contrib.admin',
@@ -220,6 +221,9 @@ AUTH_USER_MODEL = 'userauth.CustomUser'
 
 UNFOLD = {
     "SITE_HEADER": "Admin Dashboard",
+      "DASHBOARD_PANELS": [
+        "userauth.admin.UserSignupChartPanel",  # <- Adjust path if needed
+    ],
 }
 
 # ACCOUNT_ADAPTER = 'userauth.adapters.MyAccountAdapter'
