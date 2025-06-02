@@ -32,6 +32,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "unfold",
+    'unfold.contrib.import_export' ,
+    'unfold.contrib.filters',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,7 +54,9 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
 
     'drf_yasg',
-    'userauth',  
+    'userauth', 
+     'import_export',
+    
 ]
 
 SITE_ID = 1
@@ -70,20 +75,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 
-# TEMPLATES = [
-#     {
-#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-#         'DIRS': [],
-#         'APP_DIRS': True,
-#         'OPTIONS': {
-#             'context_processors': [
-#                 'django.template.context_processors.request',
-#                 'django.contrib.auth.context_processors.auth',
-#                 'django.contrib.messages.context_processors.messages',
-#             ],
-#         },
-#     },
-# ]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -225,6 +217,10 @@ SWAGGER_SETTINGS = {
     }
 }
 AUTH_USER_MODEL = 'userauth.CustomUser'
+
+UNFOLD = {
+    "SITE_HEADER": "Admin Dashboard",
+}
 
 # ACCOUNT_ADAPTER = 'userauth.adapters.MyAccountAdapter'
 

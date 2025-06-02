@@ -1,9 +1,18 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
+from unfold.admin import ModelAdmin
+from unfold.contrib.filters.admin import RangeDateFilter, RangeDateTimeFilter
+from import_export.admin import ImportExportModelAdmin
+from unfold.contrib.import_export.forms import ExportForm, ImportForm
 from django.utils.translation import gettext_lazy as _
 from .models import CustomUser
 
-class CustomUserAdmin(UserAdmin):
+
+class CustomUserAdmin(ImportExportModelAdmin,ModelAdmin):
+    import_form_class = ImportForm
+    export_form_class = ExportForm
+
+
+
     model = CustomUser
     list_display = ('email', 'first_name', 'last_name', 'is_staff', 'is_active')
     list_filter = ('is_staff', 'is_active')

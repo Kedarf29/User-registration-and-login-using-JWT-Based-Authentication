@@ -1,11 +1,3 @@
-# # userauth/views.py
-# from django.shortcuts import render
-
-# def api_home(request):
-#     return render(request, 'home.html')
-
-
-
 
 from django.contrib.auth import authenticate, get_user_model
 from django.shortcuts import render
@@ -14,13 +6,9 @@ from django.http import JsonResponse
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 import json
-# from django.contrib.auth.tokens import default_token_generator
-# from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-# from django.utils.encoding import force_bytes, force_str
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-# from django.contrib.auth.hashers import check_password
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import status
 from django.contrib.auth import authenticate
